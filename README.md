@@ -1,12 +1,18 @@
-Role Name
+postgresqlprivs
 =========
 
-A brief description of the role goes here.
+Ansible role to set postgresql privileges
 
 Requirements
 ------------
+No special requirements; note that this role requires root access, so either run it in a playbook with a global become: yes, or invoke the role in your playbook like:
 
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+```
+- hosts: database
+  roles:
+    - role: notpixxl.postgresqlprivs
+      become: yes
+```
 
 Role Variables
 --------------
@@ -35,4 +41,4 @@ BSD
 Author Information
 ------------------
 
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).
+christophepiv@gmail.com / https://pixxlisation.tech.blog
