@@ -42,8 +42,6 @@ postgresql_privs
     privs: SELECT,INSERT
     type: table
     objs: example_table1,example_table2
-   
-
 ```
 License
 -------
