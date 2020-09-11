@@ -16,8 +16,25 @@ No special requirements; note that this role requires root access, so either run
 
 Role Variables
 --------------
+```
+# Postgresql Privs to ensure exist.
+postgresql_privs: []
+# - name: jdoe # required
+#   db: somedb # required
+#   grant_option: # defaults to 'no'
+#   objs: # defaults to not set
+#   privs: # defaults to not set
+#   schema: # defaults to 'public'
+#   login_host: # defaults to 'localhost'
+#   login_password: # defaults to not set
+#   login_user: # defaults to '{{ postgresql_user }}'
+#   login_unix_socket: # defaults to 1st of postgresql_unix_socket_directories
+#   port: # defaults to not set
+#   type: # defaults to not set
+#   state: # defaults to 'present'
+```
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
+A list of privileges to ensure exist on the server. Only the ```name``` and the ```db``` is required; all other properties are optional.
 
 Dependencies
 ------------
