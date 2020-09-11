@@ -1,0 +1,35 @@
+---
+# Set postgresql state when configuration changes are made. Recommended values:
+# `restarted` or `reloaded`
+postgresql_restarted_state: "restarted"
+
+postgresql_python_library: python-psycopg2
+postgresql_user: postgres
+postgresql_group: postgres
+
+postgresql_unix_socket_directories:
+  - /var/run/postgresql
+
+postgresql_service_state: started
+postgresql_service_enabled: true
+
+# Global configuration options that will be set in postgresql.conf.
+postgresql_global_config_options:
+  - option: unix_socket_directories
+    value: '{{ postgresql_unix_socket_directories | join(",") }}'
+
+# Postgresql Privs to ensure exist.
+postgresql_privs: []
+# - name: jdoe # required
+#   db: # required
+#   grant_option: # defaults to 'no'
+#   objs: # defaults to not set
+#   privs: # defaults to not set
+#   schema: # defaults to 'public'
+#   login_host: # defaults to 'localhost'
+#   login_password: # defaults to not set
+#   login_user: # defaults to '{{ postgresql_user }}'
+#   login_unix_socket: # defaults to 1st of postgresql_unix_socket_directories
+#   port: # defaults to not set
+#   type: # defaults to not set
+#   state: # defaults to 'present'
