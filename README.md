@@ -74,4 +74,4 @@ BSD
 Author Information
 ------------------
 
-christophepiv@gmail.com / https://pixxlisation.tech.blog
+christophepiv@gmail.com / <https://pixxlisation.tech.blog>
