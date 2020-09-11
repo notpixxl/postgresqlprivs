@@ -1,7 +1,7 @@
 Ansible Role : Postgresqlprivs
 =========
 
-Ansible role to set postgresql privileges
+Set PostgreSQL Privileges 
 
 Requirements
 ------------
