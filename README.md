@@ -1,13 +1,14 @@
 Ansible Role : Postgresqlprivs
 =========
 
-Set PostgreSQL Privileges 
+Set PostgreSQL Privileges
 
 Requirements
 ------------
-No special requirements; note that this role requires root access, so either run it in a playbook with a global become: yes, or invoke the role in your playbook like:
 
-```
+No special requirements; note that this role requires postgresql server up and running on your targets and root access; so either run it in a playbook with a global ```become: yes``` , or invoke the role in your playbook like:
+
+```yaml
 - hosts: database
   roles:
     - role: notpixxl.postgresqlprivs
@@ -16,7 +17,8 @@ No special requirements; note that this role requires root access, so either run
 
 Role Variables
 --------------
-```
+
+```yaml
 # Postgresql Privs to ensure exist.
 postgresql_privs: []
 # - name: jdoe # required
@@ -43,7 +45,8 @@ None.
 
 Example Playbook
 ----------------
-```
+
+```yaml
 - hosts: database
   become: yes
   vars_files:
@@ -51,8 +54,10 @@ Example Playbook
   roles:
     - notpixxl.postgresqlprivs
 ```
+
 Inside ```vars/main.yml```:
-```
+
+```yaml
 postgresql_privs
   - name: example_role
     db: example_db
@@ -60,6 +65,7 @@ postgresql_privs
     type: table
     objs: example_table1,example_table2
 ```
+
 License
 -------
 
