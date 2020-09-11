@@ -49,7 +49,7 @@ Example Playbook
   vars_files:
     - vars/main.yml
   roles:
-    - geerlingguy.postgresql
+    - notpixxl.postgresqlprivs
 ```
 Inside ```vars/main.yml```:
 ```
